@@ -1,6 +1,6 @@
-# Opprett en tom dictionary for å lagre ansatte
+# top dictionary 
 ansatt_register = {}
-
+#function for å legge til ansatte.
 def legg_til_ansatt():
     navn = input("Skriv inn ansattens navn: ")
     etternavn = input("Skriv inn ansattens etternavn: ")
@@ -11,7 +11,7 @@ def legg_til_ansatt():
         "jobb_tittel": jobb_tittel
     }
     print(f"{navn} er lagt til i ansattregisteret.")
-
+#function for å redigere den ansatte 
 def rediger_ansatt():
     navn = input("Skriv inn navnet på ansatten du vil redigere: ")
     if navn in ansatt_register:
@@ -23,7 +23,7 @@ def rediger_ansatt():
         print(f"{navn} er oppdatert.")
     else:
         print(f"{navn} finnes ikke i ansattregisteret.")
-
+#function for å fjerne en ansatte fra registeret 
 def fjern_ansatt():
     navn = input("Skriv inn navnet på ansatten du vil fjerne: ")
     if navn in ansatt_register:
@@ -31,7 +31,7 @@ def fjern_ansatt():
         print(f"{navn} er fjernet fra ansattregisteret.")
     else:
         print(f"{navn} finnes ikke i ansattregisteret.")
-
+#fuction for å printe ut å vise alle de ansatte i registret 
 def vis_ansatt_register():
     print("\nAnsattregister:")
     for navn, ansatt_info in ansatt_register.items():
@@ -39,7 +39,7 @@ def vis_ansatt_register():
         print(f"Etternavn: {ansatt_info['etternavn']}")
         print(f"Jobbtittel: {ansatt_info['jobb_tittel']}")
         print()
-
+# en enkel meny for å velge hva du skal gjøre 
 while True:
     print("\nVelg en handling:")
     print("1 - Legg til ansatt")
