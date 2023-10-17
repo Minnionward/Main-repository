@@ -1,3 +1,6 @@
+# top dictionary 
+import json
+ansatt_register = {}
 #function for å legge til ansatte.
 def legg_til_ansatt():
     navn = input("Skriv inn ansattens navn: ")
